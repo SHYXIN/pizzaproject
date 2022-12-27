@@ -75,6 +75,8 @@ class UserSerializer(serializers.ModelSerializer):
         user.set_password(validated_data['password'])
         user.save()
         new_token = Token.objects.create(user=user)
+        # print(new_token)
+        # print(user)
         return user
 
     class Meta:

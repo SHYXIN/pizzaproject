@@ -24,7 +24,7 @@ class PizzeriaRetrieveAPIView(generics.RetrieveAPIView):
 	serializer_class = PizzeriaDetailSerializer
 
 class PizzeriaCreateAPIView(generics.CreateAPIView):
-	# parser_classes = [MultiPartParser]
+	parser_classes = [MultiPartParser]
 	queryset = Pizzeria.objects.all()
 	serializer_class = PizzeriaDetailSerializer
 
